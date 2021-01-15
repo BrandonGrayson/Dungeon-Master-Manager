@@ -4,7 +4,6 @@ branches:
   only:
     - master
     - main
-    - travis-test
 cache:
   directories:
     - node_modules
