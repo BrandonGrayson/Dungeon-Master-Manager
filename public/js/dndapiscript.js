@@ -13,8 +13,7 @@ $.ajax({
 }).then(function (res) {
   for (let i = 0; i < res.results.length; i++) {
     $('<option>').attr('id', res.results[i].name).attr('value', res.results[i].name).text(res.results[i].name).appendTo('#classChoice');
-    
-    }   
+}   
 });
 
 $.ajax({
@@ -71,12 +70,3 @@ $('#raceClassBtn').on('click', function () {
     document.getElementById(attributesArray[counter]).textContent=attributesArray[counter] + ":" + attribValue.toFixed(0);
     }
 })
-
-
-
-
-
-
-
-
-
