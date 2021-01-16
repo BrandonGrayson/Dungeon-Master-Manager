@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dungeon Master Manager</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" type="text/css" href="/public/stylesheets/style.css" /> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Proza+Libre@1&family=Roboto+Slab&display=swap" rel="stylesheet"> -->
+</head>
+
+<body>
+    <div class="d-flex flex-row">
+            <form>
+                <div class="form-group">
+                  <label for="characterName">Character Name</label>
+                  <input type="text" class="form-control" id="characterName" placeholder="Character Name">
+                </div>
+                <div class="form-group">
+                  <label for="raceChoice">Races</label>
+                  <select class="form-control" id="raceChoice">
+                  </select>
+                </div>
+                <div class="form-group">
+                    <label for="classChoice">Classes</label>
+                    <select class="form-control" id="classChoice">
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="classChoice">Simple Weapons (Must Select One)</label>
+                    <select class="form-control" id="simpleweaponChoice">
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary" id="raceClassBtn">Continue</button>                
+              </form>
+            <div class="d-flex flex-column" id="newCharacter">
+            <div id="createdCharacter">
+            </div>
+            <h4 class= "attributes" id="str"></h4><br>
+            <h4 class= "attributes" id="int"></h4><br>
+            <h4 class= "attributes" id="wis"></h4><br>
+            <h4 class= "attributes" id="dex"></h4><br>
+            <h4 class= "attributes" id="con"></h4><br>
+            <h4 class= "attributes" id="cha"></h4><br>
+            </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
