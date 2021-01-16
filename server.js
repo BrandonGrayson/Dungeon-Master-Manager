@@ -1,5 +1,6 @@
 // Requiring necessary npm packages
 const express = require("express");
+const sequelize = require("sequelize");
 
 // Requiring passport as we've configured it
 
