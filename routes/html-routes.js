@@ -1,11 +1,10 @@
-var path = require("path");
+// let path = require("path");
 
 // Routes
 // =========================================
 
 module.exports = function(app) {
-    app.get("/", function(req, res) {
-       res.render("index", ) 
-    })
-    
+  app.get("/", (req, res) => {
+    res.render("index");
+  });
 };

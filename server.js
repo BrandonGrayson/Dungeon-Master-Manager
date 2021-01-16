@@ -1,6 +1,6 @@
 // Requiring necessary npm packages
 const express = require("express");
-var exphbs = require("express-handlebars");
+const exphbs = require("express-handlebars");
 
 // Requiring passport as we've configured it
 // Setting up port and requiring models for syncing
@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 8080;
 // Creating express app and configuring middleware needed for authentication
 const app = express();
 
-app.engine("handlebars", exphbs({defaultLayout: "main"}));
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 // We need to use sessions to keep track of our user's login status
 
@@ -30,7 +30,7 @@ require("./routes/html-routes.js")(app);
 //     );
 //   });
 // });
-app.listen(PORT, function() {
+app.listen(PORT, () => {
   // Log (server-side) when our server has started
   console.log("Server listening on: http://localhost:" + PORT);
 });
