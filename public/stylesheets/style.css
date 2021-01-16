@@ -4,14 +4,15 @@ form.login {
 }
 
 body {
-  background: #2E1E0F;
+  background: #1f150c;
   font-family: 'Proza Libre', sans-serif;
   font-size: 14pt;
   color: #a2a79e;
+  margin: 2%;
 }
 
 .container {
-  background: transparent;
+  background: #2E1E0F;
   border: 2px solid #A77464;
   border-radius: 10px;
 }
@@ -20,6 +21,18 @@ h1 {
   font-family: 'Roboto Slab', serif;
   size: 24px;
   color: #A27E8E;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+h2 {
+  font-family: 'Roboto Slab', serif;
+  size: 20px;
+  color: #a57373;
+  background: #3d2222;
+  padding: 5px;
+  border-radius: 10px;
 }
 
 a:link,
