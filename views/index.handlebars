@@ -1,0 +1,49 @@
+<h1 class="title text-center">Eat-Da-Burger</h1>
+
+<section class="container">
+    <section class="row">
+        <section class="col" id="list-burgers">
+            <h2 class="burger-title text-center">Available Burgers</h2>
+            {{#each burgers}}
+            {{#unless this.devoured}}
+            <section class="available-burgers">
+                <form class="update" data-id={{this.id}}>
+                    {{this.burger_name}}
+                    <button type="submit" data-id={{this.id}} class="btn- btn-default update-button"
+                        id="burger-ready">Devour
+                        It!</button>
+                </form>
+            </section>
+            {{/unless}}
+            {{/each}}
+        </section>
+        <section class="col" id="burger-img">
+            <img src="assets/img/burger.png" class="text-center" id="png">
+        </section>
+        <section class="col" id="list-devoured">
+            <h2 class="burger-title text-center">Burgers Devoured</h2>
+            {{#each burgers}}
+            {{#if this.devoured}}
+            <section class="devoured-burgers">
+                {{this.burger_name}}
+            </section>
+            {{/if}}
+            {{/each}}
+        </section>
+    </section>
+</section>
+
+<section class="container">
+    <section class="row">
+        <section class="col"></section>
+        <section class="col">
+            <form id="add-burger" class="create-form d-flex">
+                <section class="form-group">
+                    <input type="text" id="enter-burger" name="burger_name" class="form-control w-100">
+                    <button id="burger_submit" type="submit" class="btn btn-warning w-100">Add the burger!</button>
+                </section>
+            </form>
+        </section>
+        <section class="col"></section>
+    </section>
+</section>

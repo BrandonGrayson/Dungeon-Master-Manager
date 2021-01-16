@@ -1,0 +1,39 @@
+form.signup,
+form.login {
+  margin-top: 50px;
+}
+
+body {
+  background: #2E1E0F;
+  font-family: 'Proza Libre', sans-serif;
+  font-size: 14pt;
+  color: #a2a79e;
+}
+
+.container {
+  background: transparent;
+  border: 2px solid #A77464;
+  border-radius: 10px;
+}
+
+h1 {
+  font-family: 'Roboto Slab', serif;
+  size: 24px;
+  color: #A27E8E;
+}
+
+a:link,
+a:visited {
+  color: #882924;
+  font-weight: bold;
+}
+
+a:active {
+  color: red;
+  font-weight: bolder
+}
+
+a:hover {
+  color: #cb4942;
+  font-weight: bold;
+}
