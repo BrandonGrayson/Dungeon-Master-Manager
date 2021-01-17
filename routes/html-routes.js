@@ -2,9 +2,12 @@
 
 // Routes
 // =========================================
-
 module.exports = function(app) {
   app.get("/", (req, res) => {
-    res.render("index");
+    res.render("members");
+  });
+
+  app.get("/create", (req, res) => {
+    res.render("creation");
   });
 };
