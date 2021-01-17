@@ -11,7 +11,7 @@ body {
   margin: 2%;
 }
 
-.container {
+.members-container {
   background: #2E1E0F;
   border: 2px solid #A77464;
   border-radius: 10px;
@@ -51,7 +51,7 @@ a:hover {
   font-weight: bold;
 }
 
-.header-img {
+.logo {
   /* width: 300px;
   height: 100px; */
 }
