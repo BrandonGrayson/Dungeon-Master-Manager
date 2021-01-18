@@ -1,11 +1,12 @@
 CREATE DATABASE DMM_DB;
 USE DMM_DB;
 
-CREATE TABLE game (
+CREATE TABLE games (
     id int NOT NULL AUTO_INCREMENT,
     name_of_game varchar(40) NOT NULL,
     story_line varchar(40) NOT NULL,
-    t1  TIMESTAMP
+    t1  TIMESTAMP,
+    PRIMARY KEY (id)
 );
 
 CREATE TABLE characters (
@@ -22,7 +23,9 @@ CREATE TABLE characters (
     wisdom INT NOT NULL,
     charisma INT NOT NULL,
     weapons VARCHAR(50),
-
-	PRIMARY KEY (id),
-    FOREIGN KEY (game_id),
+    PRIMARY KEY (id),
+    FOREIGN KEY (game_id) REFERENCES games(id)
 );
+
+INSERT INTO games(name_of_game, story_line)
+VALUES ("testing", "this story line")
