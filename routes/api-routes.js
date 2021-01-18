@@ -19,4 +19,15 @@ module.exports = function(app) {
         res.json(dbCharacters);
       });
   });
+
+  
+
+  // app.post("/api/create", function(app) {
+  //   db.characters.create({
+  //     game_id: ,
+
+
+  //   })
+  // })
+
 };

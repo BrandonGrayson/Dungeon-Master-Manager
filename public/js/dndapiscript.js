@@ -71,4 +71,12 @@ $("#raceClassBtn").on("click", function (event) {
     attribValue=totalRoll + (d100 * 0.01)
     document.getElementById(attributesArray[counter]).textContent=attributesArray[counter] + ":" + attribValue.toFixed(0);
     }
+console.log(character);
+
+
+
+    // $.post("/api/create", character)
+    // .then(function () {
+    //   console.log("made it to post request!")
+    // })
 });
