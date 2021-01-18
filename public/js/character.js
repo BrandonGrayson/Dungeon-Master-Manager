@@ -14,7 +14,7 @@ class Character {
     weapons
   ) {
     this.race = race;
-    this.alignment = alignment;
+    // this.alignment = alignment;
     this.character_class = character_class;
     this.name = name;
     this.strength = strength;
