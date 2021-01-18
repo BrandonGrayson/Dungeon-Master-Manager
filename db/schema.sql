@@ -14,8 +14,7 @@ CREATE TABLE characters (
 	id int NOT NULL AUTO_INCREMENT,
     game_id int NOT NULL,
     race VARCHAR(40) NOT NULL,
-    alignment VARCHAR(40) NOT NULL,
-    character_class varchar(40) NOT NULL,
+    class varchar(40) NOT NULL,
 	name varchar(40) NOT NULL,
     strength INT NOT NULL,
     dexterity INT NOT NULL,
@@ -24,6 +23,6 @@ CREATE TABLE characters (
     wisdom INT NOT NULL,
     charisma INT NOT NULL,
     weapons VARCHAR(50),
-    FOREIGN KEY (story_line_id) REFERENCES characters (story_line_id),
+    FOREIGN KEY (id) REFERENCES game (id),
     PRIMARY KEY (id)
 );

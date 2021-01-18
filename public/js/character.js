@@ -2,7 +2,6 @@
 class Character {
   constructor(
     race,
-    alignment,
     character_class,
     name,
     strength,
@@ -14,7 +13,6 @@ class Character {
     weapons
   ) {
     this.race = race;
-    // this.alignment = alignment;
     this.character_class = character_class;
     this.name = name;
     this.strength = strength;

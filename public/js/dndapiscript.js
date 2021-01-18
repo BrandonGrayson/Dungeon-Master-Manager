@@ -1,3 +1,5 @@
+// const { ConnectionError } = require("sequelize/types");
+
 $.ajax({
   url: "https://www.dnd5eapi.co/api/races",
   method: "GET"
@@ -24,7 +26,7 @@ $.ajax({
     $("<option>").attr("id", res.equipment[i].name).attr("value", res.equipment[i].name).text(res.equipment[i].name).appendTo("#simpleweaponChoice");
 }});
 
-$("#raceClassBtn").on("click", function () {
+$("#raceClassBtn").on("click", function (event) {
   event.preventDefault()
   var nameValue = $("#characterName").val()
   var raceChoice = $("#raceChoice").val()
@@ -43,7 +45,7 @@ $("#raceClassBtn").on("click", function () {
     weapon: weaponChoice
   }
 
-  console.log(character)
+  // console.log(character)
   var attributesArray = ["str","int","wis","dex","con","cha"];
   var attributesArrayLength = attributesArray.length;	
   var diceRoll;	
@@ -52,6 +54,8 @@ $("#raceClassBtn").on("click", function () {
   var counter;
   var d100;
   var attribValue
+
+  console.log(`Character data is here ${character.characterName}`)
 
   $("<h1>").text($("#characterName").val()).appendTo("#createdCharacter")
   $("<h2>").text($("#raceChoice").val()).appendTo("#createdCharacter")
