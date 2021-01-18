@@ -7,11 +7,15 @@ const exphbs = require("express-handlebars");
 const PORT = process.env.PORT || 8080;
 const app = express();
 // const db = require("./models");
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.engine("handlebars", exphbs({
+  defaultLayout: "main"
+}));
 app.set("view engine", "handlebars");
 // Creating express app and configuring middleware needed for authentication
 
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({
+  extended: true
+}));
 app.use(express.json());
 app.use(express.static("public"));
 // requiring our routes
