@@ -1,22 +1,19 @@
 const db = require("../models/");
 
 module.exports = function(app) {
-  app.get("/api/games", (req, res) => {
-    console.log(db.game);
-    db.game.findAll({}).then(dbGames => {
+  app.get("/api/games/", (req, res) => {
+    db.Game.findAll({}).then(dbGames => {
       res.json(dbGames);
     });
   });
 
-  app.get("/api/:gamesid/characters", (req, res) => {
-    db.characters
-      .findAll({
-        where: {
-          id: req.params.gamesid
-        }
-      })
-      .then(dbCharacters => {
-        res.json(dbCharacters);
-      });
+  app.get("/api/:gameid/Characters", (req, res) => {
+    db.Characters.findAll({
+      where: {
+        id: req.params.gameid
+      }
+    }).then(dbCharacters => {
+      res.json(dbCharacters);
+    });
   });
 };

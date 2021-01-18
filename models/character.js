@@ -1,6 +1,7 @@
+/* eslint-disable no-var */
 module.exports = function(sequelize, DataTypes) {
   //CHARACTER SCHEMA GOES HERE
-  const characters = sequelize.define("Characters", {
+  var Characters = sequelize.define("Characters", {
     //COLUMNS ARE MADE HERE
     id: { type: DataTypes.INTEGER, primaryKey: true },
     name: { type: DataTypes.STRING },
@@ -16,13 +17,12 @@ module.exports = function(sequelize, DataTypes) {
     weapons: { type: DataTypes.STRING }
   });
 
-  characters.associate = function(models) {
-    characters.belongsTo(models.games, {
+  Characters.associate = function(models) {
+    Characters.belongsTo(models.Game, {
       foreignKey: {
         allowNull: false
       }
     });
   };
-
-  return characters;
+  return Characters;
 };
