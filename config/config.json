@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "8Zelkova8",
-    "database": "dmm_db",
+    "password": "Prolific1",
+    "database": "DMM_DB",
     "host": "127.0.0.1",
     "port": 3306,
     "dialect": "mysql"
