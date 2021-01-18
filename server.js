@@ -16,12 +16,7 @@ app.set("view engine", "handlebars");
 
 //============ROUTES
 require("./routes/html-routes.js")(app);
-// Syncing our database and logging a message to the user upon success
-
-//===========AUTHENTICATE DATABASE
-// db.authenticate()
-//   .then(() => console.log("Connected to Database"))
-//   .catch(err => console.log("ERROR:" + err));
+require("./routes/api-routes.js")(app);
 
 //===========SYNC DATABASE
 db.sequelize.sync().then(() => {
