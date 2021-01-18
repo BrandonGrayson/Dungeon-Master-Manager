@@ -51,9 +51,24 @@ a:hover {
   font-weight: bold;
 }
 
+.background-logo {
+
+}
+
 .logo:hover {
   animation: shake 1s;
   animation-iteration-count: infinite;
+  cursor: pointer;
+  display: block;
+}
+
+.enter-img:hover {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+  left: -600;
 }
 
 @keyframes shake {
@@ -69,3 +84,32 @@ a:hover {
   90% { transform: translate(1px, 2px) rotate(0deg); }
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
+
+@keyframes blood-animation {
+  0% {
+    left: 0;
+  }
+  10% {
+    left: 50%;
+  }
+  100% {
+    left: 10%;
+  }
+}
+
+.logo-container {
+  position: relative;
+
+}
+
+.overlay {
+  position: absolute;
+  bottom: .5;
+  transition: .1s ease;
+
+}
+
+.logo-container:hover .overlay {
+  opacity: 1;
+}
+
