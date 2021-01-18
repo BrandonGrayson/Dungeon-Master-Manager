@@ -14,7 +14,11 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
       len: [1]
     },
-    
+    name: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+      
+    }
   });
 
   // characters.associate = function(models) {
