@@ -3,12 +3,7 @@
 // Routes
 const db = require("../models/");
 // =========================================
-<<<<<<< HEAD
-
-module.exports = function (app) {
-=======
 module.exports = function(app) {
->>>>>>> 1dc93f3da63012356893577de65d2f2c3aa875f6
   app.get("/", (req, res) => {
     res.render("members");
   });
@@ -27,9 +22,6 @@ module.exports = function(app) {
       res.json(dbGames);
     });
   });
-<<<<<<< HEAD
-};
-=======
 };
 
 // app.get("/api/games/", (req, res) => {
@@ -48,4 +40,3 @@ module.exports = function(app) {
 //       res.json(dbCharacters);
 //     });
 // })
->>>>>>> 1dc93f3da63012356893577de65d2f2c3aa875f6
