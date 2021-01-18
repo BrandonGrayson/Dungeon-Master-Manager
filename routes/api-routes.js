@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Routes =========================
 
 module.exports = function (app) {
@@ -5,3 +6,6 @@ module.exports = function (app) {
       connection.query("INSERT INTO quotes ()")
   })
 }
+=======
+
+>>>>>>> 1dc93f3da63012356893577de65d2f2c3aa875f6
