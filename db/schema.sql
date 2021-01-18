@@ -15,7 +15,7 @@ CREATE TABLE characters (
     game_id int NOT NULL,
     race VARCHAR(40) NOT NULL,
     alignment VARCHAR(40) NOT NULL,
-    class varchar(40) NOT NULL,
+    character_class varchar(40) NOT NULL,
 	name varchar(40) NOT NULL,
     strength INT NOT NULL,
     dexterity INT NOT NULL,
