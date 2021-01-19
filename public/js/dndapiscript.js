@@ -44,20 +44,21 @@ $(document).ready(() => {
       for (let i = 0; i < data.length; i++) {
         $("<button>")
           .attr("id", data[i].name_of_game)
+          .attr("type", "submit")
           .attr("class", "gamebutton")
-          .attr("value", data[i].name_of_game)
+          .attr("value", data[i].story_line)
           .text(data[i].name_of_game)
           .appendTo("#list-of-games");
       }
     });
+    // eslint-disable-next-line prefer-arrow-callback
+    $(document).on("click", ".gamebutton", function(event) {
+      event.preventDefault();
+      document.getElementById("name_of_game").innerText = this.id;
+      document.getElementById("story_line").innerText = this.value;
+    });
   }
   getGames();
-});
-
-const gamebuttons = document.getElementsByClassName("gamebutton");
-$(gamebuttons).on("click", event => {
-  event.preventDefault();
-  console.log("this works");
 });
 
 $("#raceClassBtn").on("click", event => {
