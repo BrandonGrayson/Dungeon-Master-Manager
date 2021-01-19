@@ -1,13 +1,13 @@
 CREATE DATABASE DMM_DB;
 USE DMM_DB;
 
--- CREATE TABLE games (
---     id int NOT NULL AUTO_INCREMENT,
---     name_of_game varchar(40) NOT NULL,
---     story_line varchar(40) NOT NULL,
---     t1  TIMESTAMP,
---     PRIMARY KEY (id)
--- );
+CREATE TABLE games (
+    id int NOT NULL AUTO_INCREMENT,
+    name_of_game varchar(40) NOT NULL,
+    story_line varchar(40) NOT NULL,
+    t1  TIMESTAMP,
+    PRIMARY KEY (id)
+);
 
 CREATE TABLE characters (
 	id int NOT NULL AUTO_INCREMENT,
