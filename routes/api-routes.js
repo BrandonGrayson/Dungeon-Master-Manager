@@ -21,7 +21,7 @@ module.exports = function(app) {
 
   app.post("/api/new", function(req, res) {
   console.log("REQ BODY---> ", req.body)
-  db.Games.create({
+  db.Game.create({
     name_of_game: req.body.name_of_game,
     story_line: req.body.story_line
   }).then(function(gameCreated) {
