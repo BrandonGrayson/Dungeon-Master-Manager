@@ -1,30 +1,28 @@
+/* eslint-disable no-var */
 module.exports = function(sequelize, DataTypes) {
   //CHARACTER SCHEMA GOES HERE
-  const characters = sequelize.define("Characters", {
+  var Characters = sequelize.define("Characters", {
     //COLUMNS ARE MADE HERE
-    race: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
-    },
-    class: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-      len: [1]
-    }
+    id: { type: DataTypes.INTEGER, primaryKey: true },
+    name: { type: DataTypes.STRING },
+    race: { type: DataTypes.STRING, allowNull: false },
+    class: { type: DataTypes.TEXT, allowNull: false },
+    alignment: { type: DataTypes.STRING },
+    strength: { type: DataTypes.INTEGER },
+    dexterity: { type: DataTypes.INTEGER },
+    constitution: { type: DataTypes.INTEGER },
+    intelligence: { type: DataTypes.INTEGER },
+    wisdom: { type: DataTypes.INTEGER },
+    charisma: { type: DataTypes.INTEGER },
+    weapons: { type: DataTypes.STRING }
   });
 
-  // characters.associate = function(models) {
-  //   // We're saying that a Post should belong to an Author
-  //   // A Post can't be created without an Author due to the foreign key constraint
-  //   characters.belongsTo(models.Games, {
-  //     foreignKey: {
-  //       allowNull: false
-  //     }
-  //   });
-  // };
-
-  return characters;
+  Characters.associate = function(models) {
+    Characters.belongsTo(models.Game, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
+  return Characters;
 };

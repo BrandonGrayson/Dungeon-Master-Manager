@@ -1,16 +1,19 @@
+/* eslint-disable no-var */
 //GAME SCHEMEA GOES HERE
 module.exports = function(sequelize, DataTypes) {
-  const Games = sequelize.define("games", {
+  var Game = sequelize.define("Game", {
     id: { type: DataTypes.INTEGER, primaryKey: true },
+    // eslint-disable-next-line camelcase
     name_of_game: DataTypes.STRING,
+    // eslint-disable-next-line camelcase
     story_line: DataTypes.STRING
   });
-  return Games;
+  Game.associate = function(models) {
+    // Associating Author with Posts
+    // When an Author is deleted, also delete any associated Posts
+    Game.hasMany(models.Characters, {
+      onDelete: "cascade"
+    });
+  };
+  return Game;
 };
-// Games.associate = function(models) {
-//   // Associating Author with Posts
-//   // When an Author is deleted, also delete any associated Posts
-//   Games.hasMany(models.character, {
-//     onDelete: "cascade"
-//   });
-// };s
