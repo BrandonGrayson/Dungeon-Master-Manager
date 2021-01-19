@@ -7,14 +7,13 @@ module.exports = function(sequelize, DataTypes) {
     name: { type: DataTypes.STRING, allowNull: false },
     race: { type: DataTypes.STRING, allowNull: false },
     class: { type: DataTypes.TEXT, allowNull: false },
-    alignment: { type: DataTypes.STRING },
+    // weapons: { type: DataTypes.STRING },
     strength: { type: DataTypes.INTEGER },
     dexterity: { type: DataTypes.INTEGER },
     constitution: { type: DataTypes.INTEGER },
     intelligence: { type: DataTypes.INTEGER },
     wisdom: { type: DataTypes.INTEGER },
-    charisma: { type: DataTypes.INTEGER },
-    weapons: { type: DataTypes.STRING }
+    charisma: { type: DataTypes.INTEGER }
   });
 
   Characters.associate = function(models) {

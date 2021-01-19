@@ -1,4 +1,22 @@
+<div style="max-width: 700px;" class="d-flex flex-row">
+<section class="container-fluid d-flex flex-row" style="min-width: 450px;">
+    <div class="d-flex flex-column">
+    <form>
+        <label for="nameOfGame">Name of Game:</label>
+        <input type="text" id="nameOfGame" name="nameOfGame">
+        <label for="storyLine">Story Line:</label>
+        <input type="text" id="storyLine" name="storyLine">
+        <button id="gameForm" class="btn btn-danger">Continue</button>
+    </form>
+    <div id="listgames" class="mt-5 d-flex flex-column">
+    </div>
+    </div>
+</section>
 <section class="container-fluid d-flex flex-row">
+    <div class="d-flex flex-column">
+    <h1>CHARACTER CREATION</h1>
+    <h2 class="text-center">for</h2>
+    <h1 id="gamename">NAME GOES HERE</h1>
     <form>
         <section class="form-group">
             <label for="characterName">
@@ -31,11 +49,13 @@
         </section>
         <section class="form-group">
             <label for="classChoice">
-                <h3>Simple Weapons</h3>
-                Choose a weapon. You can only choose one!
+                <h3>Weapons</h3>
+                Choose a weapon for your character. Each class represents your character's vocation and the tactics
+                they'll typically use within the game. Not which one is best? Check out the <a
+                    href="https://www.dndbeyond.com/sources/basic-rules/classes" target="_new">D&D Beyond</a> class
+                descriptions.
             </label>
-
-            <select class="form-control" id="simpleweaponChoice" placeholder="Choose a weapon">
+            <select class="form-control" id="weapons" placeholder="Choose a weapon">
             </select>
         </section>
         <section class="d-flex flex-row">
@@ -66,17 +86,10 @@
         </section>
         <button type="submit" class="btn btn-danger" id="raceClassBtn">Continue</button>
     </form>
+    </div>
 </section>
-<section class="container-fluid">
-    <form>
-        <label for="nameOfGame">Name of Game:</label>
-        <input type="text" id="nameOfGame" name="nameOfGame">
-        <label for="storyLine">Story Line:</label>
-        <input type="text" id="storyLine" name="storyLine">
-        <button id="gameForm" class="btn btn-danger">Continue</button>
-    </form>
-</section>
-<section id="createdCharacter" class="col-md" style="max-width: 400px; background-color: tan;">
+
+{{!-- <section id="createdCharacter" class="col-md" style="max-width: 400px; background-color: tan;">
 <h1 id="nameText">NAME:</h3>
 <section class="d-flex flex-row">
 <h3 id="raceText" class="mt-0">Race:</h3>
@@ -110,4 +123,5 @@
 <h3 id="charText" class="mx-1 mt-0">Char:</h3>
 </section>
 </section>
-</section>
+</section> --}}
+</div>
