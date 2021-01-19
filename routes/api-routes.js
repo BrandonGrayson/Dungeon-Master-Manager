@@ -20,7 +20,7 @@ module.exports = function(app) {
   app.post("/api/:gameid/characters", req => {
     console.log(req.body);
     db.Characters.create({
-      id: req.body.id,
+      // id: req.body.id,
       name: req.body.name,
       race: req.body.race,
       class: req.body.class,
