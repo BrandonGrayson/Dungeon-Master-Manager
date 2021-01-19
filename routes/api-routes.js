@@ -16,7 +16,27 @@ module.exports = function(app) {
       res.json(dbCharacters);
     });
   });
-  
+
+  app.post("/api/:gameid/characters", req => {
+    console.log(req.body);
+    db.Characters.create({
+      id: req.body.id,
+      name: req.body.name,
+      race: req.body.race,
+      class: req.body.class,
+      alignment: req.body.alignment,
+      strength: req.body.strength,
+      dexterity: req.body.dexterity,
+      constitution: req.body.constitution,
+      intelligence: req.body.intelligence,
+      wisdom: req.body.wisdom,
+      charisma: req.body.charisma,
+      GameId: req.body.gameid
+    }).then(dbCharacters => {
+      console.log("New Character:" + dbCharacters);
+    });
+  }); 
+
   app.post("/api/new", function(req, res) {
   console.log("REQ BODY---> ", req.body)
   db.Game.create({
