@@ -11,6 +11,12 @@ body {
   margin: 2%;
 }
 
+.howToCard {
+  font-family: 'Proza Libre', sans-serif !important;
+  border: 4px solid #A77464;
+  background-color: beige;
+}
+
 .members-container {
   background: #2E1E0F;
   border: 2px solid #A77464;
