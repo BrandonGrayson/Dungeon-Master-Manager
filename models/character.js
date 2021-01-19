@@ -3,8 +3,8 @@ module.exports = function(sequelize, DataTypes) {
   //CHARACTER SCHEMA GOES HERE
   var Characters = sequelize.define("Characters", {
     //COLUMNS ARE MADE HERE
-    id: { type: DataTypes.INTEGER, primaryKey: true },
-    name: { type: DataTypes.STRING },
+    id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
+    name: { type: DataTypes.STRING, allowNull: false },
     race: { type: DataTypes.STRING, allowNull: false },
     class: { type: DataTypes.TEXT, allowNull: false },
     alignment: { type: DataTypes.STRING },
