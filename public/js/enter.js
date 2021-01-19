@@ -33,7 +33,7 @@ $(document).ready(() => {
     $("*").fadeOut(3000);
 
     setTimeout(() => {
-      location.replace("/create")
+      location.replace("/create");
     }, 3000);
   });
 });
