@@ -73,10 +73,46 @@ $(document).ready(() => {
         "/api/" + `${this.id}` + "/characters/" + `${this.textContent}`,
         data => {
           for (let i = 0; i < data.length; i++) {
-            $("<h4>")
-              .attr("value", data[i].name)
-              .text(data[i].name)
-              .appendTo("#attributesection");
+            $("<h5>")
+              .attr("value", data[i].race)
+              .text(data[i].race)
+              .appendTo("#racetext");
+            $("<h5>")
+              .attr("value", data[i].class)
+              .text(data[i].class)
+              .appendTo("#classtext");
+            $("<h5>")
+              .attr("value", data[i].alignment)
+              .text(data[i].alignment)
+              .appendTo("#alignmenttext");
+            $("<h5>")
+              .attr("value", data[i].weapons)
+              .text(data[i].weapons)
+              .appendTo("#simpleweapontext");
+            $("<h5>")
+              .attr("value", data[i].strength)
+              .text(data[i].strength)
+              .appendTo("#strengthText");
+            $("<h5>")
+              .attr("value", data[i].dexterity)
+              .text(data[i].dexterity)
+              .appendTo("#dexterityText");
+            $("<h5>")
+              .attr("value", data[i].constituition)
+              .text(data[i].constituition)
+              .appendTo("#constText");
+            $("<h5>")
+              .attr("value", data[i].intelligence)
+              .text(data[i].intelligence)
+              .appendTo("#intellText");
+            $("<h5>")
+              .attr("value", data[i].wisdom)
+              .text(data[i].wisdom)
+              .appendTo("#wisdomText");
+            $("<h5>")
+              .attr("value", data[i].charisma)
+              .text(data[i].charisma)
+              .appendTo("#charText");
           }
         }
       );
