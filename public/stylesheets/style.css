@@ -13,7 +13,15 @@ body {
 
 .howToCard {
   font-family: 'Proza Libre', sans-serif !important;
+  border: 4px solid #A77464;
+  background-color: beige;
 }
+
+hr {
+  border: 8px striped black;
+}
+
+
 
 .members-container {
   background: #2E1E0F;
