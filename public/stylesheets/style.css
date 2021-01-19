@@ -12,7 +12,7 @@ body {
 }
 
 .howToCard {
-  font-family: 'Proza Libre', sans-serif;
+  font-family: 'Proza Libre', sans-serif !important;
 }
 
 .members-container {
