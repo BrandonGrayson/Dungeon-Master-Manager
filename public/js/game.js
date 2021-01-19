@@ -10,8 +10,8 @@ $(document).ready(function () {
     console.log(newGame)
 
       // create post request for 
-    // $.("/api/game", function (req,res) {
-
-    // })
+    $.post("/api/new", newGame).then(function() {
+      console.log('Game data was sent!')
+    })
   })
 });
