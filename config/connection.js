@@ -12,12 +12,12 @@ if (process.env.JAWSDB_URL) {
     // Your username
     user: "root",
     // Your password
-    password: "Prolific1",
+    password: "8Zelkova8",
     database: "DMM_DB"
   });
 
   // eslint-disable-next-line prefer-arrow-callback
-  connection.connect(function(err) {
+  connection.connect(function (err) {
     if (err) {
       console.error("error connecting: " + err.stack);
       return;
