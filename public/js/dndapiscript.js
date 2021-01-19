@@ -43,8 +43,7 @@ $(document).ready(() => {
     $.get("/api/games/", data => {
       for (let i = 0; i < data.length; i++) {
         $("<button>")
-          .attr("id", data[i].name_of_game)
-          .attr("type", "submit")
+          .attr("id", data[i].id)
           .attr("class", "gamebutton")
           .attr("value", data[i].story_line)
           .text(data[i].name_of_game)
@@ -54,8 +53,33 @@ $(document).ready(() => {
     // eslint-disable-next-line prefer-arrow-callback
     $(document).on("click", ".gamebutton", function(event) {
       event.preventDefault();
-      document.getElementById("name_of_game").innerText = this.id;
+      document.getElementById("name_of_game").innerText = this.textContent;
       document.getElementById("story_line").innerText = this.value;
+      $.get("/api/" + `${this.id}` + "/characters/", data => {
+        for (let i = 0; i < data.length; i++) {
+          $("<button>")
+            .attr("id", data[i].id)
+            .attr("type", "submit")
+            .attr("class", "charbutton")
+            .attr("value", data[i].name)
+            .text(data[i].name)
+            .appendTo("#characterList");
+        }
+      });
+    });
+    $(document).on("click", ".charbutton", function(event) {
+      event.preventDefault();
+      $.get(
+        "/api/" + `${this.id}` + "/characters/" + `${this.textContent}`,
+        data => {
+          for (let i = 0; i < data.length; i++) {
+            $("<h4>")
+              .attr("value", data[i].name)
+              .text(data[i].name)
+              .appendTo("#attributesection");
+          }
+        }
+      );
     });
   }
   getGames();
