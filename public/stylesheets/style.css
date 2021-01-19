@@ -17,12 +17,6 @@ body {
   background-color: beige;
 }
 
-hr {
-  border: 8px striped black;
-}
-
-
-
 .members-container {
   background: #2E1E0F;
   border: 2px solid #A77464;
