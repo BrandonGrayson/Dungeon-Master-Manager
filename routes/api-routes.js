@@ -26,6 +26,7 @@ module.exports = function(app) {
     story_line: req.body.story_line
   }).then(function(gameCreated) {
     console.log("GAME CREATED--->", gameCreated)
+    res.json(gameCreated)
   })
   
   })
