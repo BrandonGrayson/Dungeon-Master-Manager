@@ -4,7 +4,8 @@
 // =========================================
 module.exports = function(app) {
   app.get("/", (req, res) => {
-    res.render("members");
+    // console.log("Made it here!")
+    res.render("index");
   });
 
   app.get("/create", (req, res) => {
