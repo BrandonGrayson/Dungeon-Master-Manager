@@ -38,12 +38,12 @@ $("#raceClassBtn").on("click", function (event) {
     return
   }
 
-  let character = {
-    characterName: nameValue,
-    race: raceChoice,
-    class: classChoice,
-    weapon: weaponChoice
-  }
+  // let character = {
+  //   characterName: nameValue,
+  //   race: raceChoice,
+  //   class: classChoice,
+  //   weapon: weaponChoice
+  // }
 
   // console.log(character)
   var attributesArray = ["str","int","wis","dex","con","cha"];
@@ -71,11 +71,19 @@ $("#raceClassBtn").on("click", function (event) {
     attribValue=totalRoll + (d100 * 0.01)
     document.getElementById(attributesArray[counter]).textContent=attributesArray[counter] + ":" + attribValue.toFixed(0);
     }
+
+    let character = {
+      name: nameValue,
+      race: raceChoice,
+      class: classChoice,
+      weapon: weaponChoice,
+    }
+
 console.log(character);
 
 
 
-    // $.post("/api/create", character)
+    // $.post("/api/character", character)
     // .then(function () {
     //   console.log("made it to post request!")
     // })
