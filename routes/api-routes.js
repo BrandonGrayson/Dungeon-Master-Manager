@@ -17,6 +17,16 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/api/:gameid/Characters/:name", (req, res) => {
+    db.Characters.findAll({
+      where: {
+        name: req.params.name
+      }
+    }).then(dbCharacters => {
+      res.json(dbCharacters);
+    });
+  });
+
   app.post("/api/:gameid/characters", req => {
     console.log(req.body);
     db.Characters.create({
@@ -35,7 +45,7 @@ module.exports = function(app) {
     }).then(dbCharacters => {
       console.log("New Character:" + dbCharacters);
     });
-  }); 
+  });
 
   app.post("/api/new", function(req, res) {
   console.log("REQ BODY---> ", req.body)
