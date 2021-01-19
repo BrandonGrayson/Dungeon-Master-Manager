@@ -17,8 +17,6 @@ module.exports = function(app) {
     });
   });
   
-  
-
   app.post("/api/new", function(req, res) {
   console.log("REQ BODY---> ", req.body)
   db.Game.create({
@@ -30,6 +28,4 @@ module.exports = function(app) {
   })
   
   })
-
-  app.post
 }
