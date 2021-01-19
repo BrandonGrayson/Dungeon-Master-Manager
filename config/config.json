@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "Sophie2492!",
-    "database": "DMM_DB",
+    "password": "",
+    "database": "dmm_db",
     "host": "127.0.0.1",
     "port": 3306,
     "dialect": "mysql"
