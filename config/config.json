@@ -2,10 +2,14 @@
   "development": {
     "username": "root",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "password": "8Zelkova8",
     "database": "dmm_db",
 =======
     "password": "Prolific1",
+=======
+    "password": "Sophie2492!",
+>>>>>>> 9622fed4bc9b594ec04151a3c32a4a9b13b2e932
     "database": "DMM_DB",
 >>>>>>> 48dd0df9f2555d54d36a25d2cb0f045635177e17
     "host": "127.0.0.1",
