@@ -23,9 +23,8 @@ CREATE TABLE characters (
     wisdom INT NOT NULL,
     charisma INT NOT NULL,
     weapons VARCHAR(50),
-    PRIMARY KEY (id),
-    FOREIGN KEY (game_id) REFERENCES games(id)
+    PRIMARY KEY (id)
 );
 
-INSERT INTO games(name_of_game, story_line)
-VALUES ("testing", "this story line")
+INSERT INTO games(id, name_of_game, story_line, createdAt, updatedAt)
+VALUES (1,"testing", "this story line", "1992-03-23", "1002-04-04")

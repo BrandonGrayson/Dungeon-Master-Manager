@@ -35,6 +35,13 @@ h2 {
   border-radius: 10px;
 }
 
+h3 {
+  font-family: 'Roboto Slab', serif;
+  size: 18px;
+  color: #ac5f5f;
+  margin-top: 20px;
+}
+
 a:link,
 a:visited {
   color: #882924;
@@ -112,4 +119,3 @@ a:hover {
 .logo-container:hover .overlay {
   opacity: 1;
 }
-

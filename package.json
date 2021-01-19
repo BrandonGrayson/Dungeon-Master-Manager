@@ -1,32 +1,27 @@
 {
-  "name": "1-Passport-Example",
+  "name": "project-2",
   "version": "1.0.0",
-  "description": "",
+  "description": "Dungeon Master Manager is a full stack application powered by Node.js and Express.js where you can create a unique profile to keep your adventures organized. As a dungeon master, you need to keep track of all the characters in your game and keep track of where you are in the story. Using DMM, you can go into your profile and select which game you want to look up that you have saved. You can see all of the characters that are involved within the game and even add new characters!",
   "main": "server.js",
-  "scripts": {
-    "test": "npm run lint",
-    "start": "node server.js",
-    "lint": "eslint --quiet .",
-    "fix": "eslint --fix .",
-    "watch": "nodemon server.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "express": "^4.17.0",
+    "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
     "mysql2": "^1.7.0",
     "sequelize": "^5.22.3"
   },
-  "devDependencies": {
-    "chai": "^4.1.2",
-    "chai-http": "^4.0.0",
-    "cross-env": "^5.2.0",
-    "eslint": "^4.19.1",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-prettier": "^2.6.2",
-    "mocha": "^5.2.0",
-    "prettier": "^1.13.7"
-  }
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrandonGrayson/Project-2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrandonGrayson/Project-2/issues"
+  },
+  "homepage": "https://github.com/BrandonGrayson/Project-2#readme"
 }
