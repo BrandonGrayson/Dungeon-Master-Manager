@@ -25,6 +25,8 @@ $(document).ready(() => {
     bodyFall.play();
     laugh2.play();
     $("*").fadeOut(3000);
+    // location.replace("/create")
   });
+
 
 });
