@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
   res.render('index.handlebars', )
 })
 app.get('/login', (req, res) => {
-  res.render('index.handlebars', )
+  res.render('login.handlebars', )
 })
 app.post('/login', (req, res) => {
 
