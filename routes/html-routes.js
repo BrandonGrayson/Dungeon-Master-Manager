@@ -1,10 +1,6 @@
-// let path = require("path");
-// Routes
-
 // =========================================
 module.exports = function (app) {
   app.get("/", (req, res) => {
-    // console.log("Made it here!")
     res.render("index");
   });
 
@@ -25,20 +21,3 @@ module.exports = function (app) {
   })
 
 };
-
-// app.get("/api/games/", (req, res) => {
-//   db.games.findAll({}).then(dbGames => {
-//     res.json(dbGames);
-//   });
-// });
-
-// app.get("/api/:gameid/characters", (req, res) => {
-//   db.character.findAll({
-//     where: {
-//       game_id: req.params.gameid
-//     }
-//   })
-//     .then(dbCharacters => {
-//       res.json(dbCharacters);
-//     });
-// })
