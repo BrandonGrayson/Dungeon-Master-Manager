@@ -15,6 +15,10 @@ module.exports = function(app) {
   app.get("/member", (req, res) => {
     res.render("members");
   });
+
+  app.get("/howTo", (req, res) => {
+    res.render("howTo")
+  })
 };
 
 // app.get("/api/games/", (req, res) => {

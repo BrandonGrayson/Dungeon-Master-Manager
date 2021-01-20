@@ -43,21 +43,82 @@ $(document).ready(() => {
     $.get("/api/games/", data => {
       for (let i = 0; i < data.length; i++) {
         $("<button>")
-          .attr("id", data[i].name_of_game)
+          .attr("id", data[i].id)
           .attr("class", "gamebutton")
-          .attr("value", data[i].name_of_game)
+          .attr("value", data[i].story_line)
           .text(data[i].name_of_game)
           .appendTo("#list-of-games");
       }
     });
+    // eslint-disable-next-line prefer-arrow-callback
+    $(document).on("click", ".gamebutton", function(event) {
+      event.preventDefault();
+      document.getElementById("name_of_game").innerText = this.textContent;
+      document.getElementById("story_line").innerText = this.value;
+      $.get("/api/" + `${this.id}` + "/characters/", data => {
+        for (let i = 0; i < data.length; i++) {
+          $("<button>")
+            .attr("id", data[i].id)
+            .attr("type", "submit")
+            .attr("class", "charbutton")
+            .attr("value", data[i].name)
+            .text(data[i].name)
+            .appendTo("#characterList");
+        }
+      });
+    });
+    $(document).on("click", ".charbutton", function(event) {
+      event.preventDefault();
+      $.get(
+        "/api/" + `${this.id}` + "/characters/" + `${this.textContent}`,
+        data => {
+          for (let i = 0; i < data.length; i++) {
+            $("<h5>")
+              .attr("value", data[i].race)
+              .text(data[i].race)
+              .appendTo("#racetext");
+            $("<h5>")
+              .attr("value", data[i].class)
+              .text(data[i].class)
+              .appendTo("#classtext");
+            $("<h5>")
+              .attr("value", data[i].alignment)
+              .text(data[i].alignment)
+              .appendTo("#alignmenttext");
+            $("<h5>")
+              .attr("value", data[i].weapons)
+              .text(data[i].weapons)
+              .appendTo("#simpleweapontext");
+            $("<h5>")
+              .attr("value", data[i].strength)
+              .text(data[i].strength)
+              .appendTo("#strengthText");
+            $("<h5>")
+              .attr("value", data[i].dexterity)
+              .text(data[i].dexterity)
+              .appendTo("#dexterityText");
+            $("<h5>")
+              .attr("value", data[i].constituition)
+              .text(data[i].constituition)
+              .appendTo("#constText");
+            $("<h5>")
+              .attr("value", data[i].intelligence)
+              .text(data[i].intelligence)
+              .appendTo("#intellText");
+            $("<h5>")
+              .attr("value", data[i].wisdom)
+              .text(data[i].wisdom)
+              .appendTo("#wisdomText");
+            $("<h5>")
+              .attr("value", data[i].charisma)
+              .text(data[i].charisma)
+              .appendTo("#charText");
+          }
+        }
+      );
+    });
   }
   getGames();
-});
-
-const gamebuttons = document.getElementsByClassName("gamebutton");
-$(gamebuttons).on("click", event => {
-  event.preventDefault();
-  console.log("this works");
 });
 
 $("#raceClassBtn").on("click", event => {
