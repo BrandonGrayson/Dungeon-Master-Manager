@@ -11,10 +11,17 @@ body {
   margin: 2%;
 }
 
+.howToCard {
+  font-family: 'Proza Libre', sans-serif !important;
+  border: 4px solid #A77464;
+  background-color: beige;
+}
+
 .members-container {
   background: #2E1E0F;
   border: 2px solid #A77464;
   border-radius: 10px;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.50);
 }
 
 h1 {
@@ -58,9 +65,7 @@ a:hover {
   font-weight: bold;
 }
 
-.background-logo {
-
-}
+.background-logo {}
 
 .logo:hover {
   animation: shake 1s;
@@ -79,26 +84,60 @@ a:hover {
 }
 
 @keyframes shake {
-  0% { transform: translate(1px, 1px) rotate(0deg); }
-  10% { transform: translate(-1px, -2px) rotate(-1deg); }
-  20% { transform: translate(-3px, 0px) rotate(1deg); }
-  30% { transform: translate(3px, 2px) rotate(0deg); }
-  40% { transform: translate(1px, -1px) rotate(1deg); }
-  50% { transform: translate(-1px, 2px) rotate(-1deg); }
-  60% { transform: translate(-3px, 1px) rotate(0deg); }
-  70% { transform: translate(3px, 1px) rotate(-1deg); }
-  80% { transform: translate(-1px, -1px) rotate(1deg); }
-  90% { transform: translate(1px, 2px) rotate(0deg); }
-  100% { transform: translate(1px, -2px) rotate(-1deg); }
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
 }
 
 @keyframes blood-animation {
   0% {
     left: 0;
   }
+
   10% {
     left: 50%;
   }
+
   100% {
     left: 10%;
   }
@@ -118,4 +157,56 @@ a:hover {
 
 .logo-container:hover .overlay {
   opacity: 1;
+}
+
+.gamebutton {
+  background-color: #882924;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.gamebutton:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.25);
+  background-color: #b03029;
+}
+
+.charbutton {
+  background: transparent;
+  border: 0px;
+  text-align: left;
+  display: block;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.charbutton:hover {
+  background: #882924;
+  border: 0px;
+  text-align: left;
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.charbutton:active {
+  background: #882924;
+  border: 0px;
+  text-align: left;
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+}
+
+#map {
+  max-width: 100%;
+  height: auto;
 }
