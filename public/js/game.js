@@ -1,4 +1,7 @@
 $(document).ready(function () {
+
+  if 
+
   $("#gameForm").on("click", function(event) {
       event.preventDefault()
       console.log("gamebtn clicked");

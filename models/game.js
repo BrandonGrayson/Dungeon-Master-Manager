@@ -6,7 +6,8 @@ module.exports = function(sequelize, DataTypes) {
     // eslint-disable-next-line camelcase
     name_of_game: DataTypes.STRING,
     // eslint-disable-next-line camelcase
-    story_line: DataTypes.STRING
+    story_line: DataTypes.STRING,
+    map_id: DataTypes.Int
   });
   
   Game.associate = function(models) {
