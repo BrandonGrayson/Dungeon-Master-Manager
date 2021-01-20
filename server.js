@@ -21,16 +21,16 @@ app.use(express.urlencoded({
   extended: false
 }));
 app.get('/', (req, res) => {
-  res.render('index.handlebars', )
+  res.render('index', )
 })
 app.get('/login', (req, res) => {
-  res.render('login.handlebars', )
+  res.render('login', )
 })
 app.post('/login', (req, res) => {
 
 })
 app.get('/register', (req, res) => {
-  res.render('register.handlebars', )
+  res.render('register', )
 })
 
 app.post('/register', checkNotAuthenticated, async (req, res) => {
