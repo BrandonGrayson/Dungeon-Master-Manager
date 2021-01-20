@@ -2,7 +2,7 @@
 // Routes
 
 // =========================================
-module.exports = function(app) {
+module.exports = function (app) {
   app.get("/", (req, res) => {
     // console.log("Made it here!")
     res.render("index");
@@ -19,6 +19,11 @@ module.exports = function(app) {
   app.get("/howTo", (req, res) => {
     res.render("howTo")
   })
+
+  app.get("/login", (req, res) => {
+    res.render("login")
+  })
+
 };
 
 // app.get("/api/games/", (req, res) => {
