@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-$(document).ready(function () {
-
-=======
 // eslint-disable-next-line prefer-arrow-callback
 $(document).ready(function() {
   // eslint-disable-next-line prefer-arrow-callback
->>>>>>> 41c10ca8599f11d435d211e42b0952d8c83267af
   $("#gameForm").on("click", function(event) {
     event.preventDefault();
     console.log("gamebtn clicked");
