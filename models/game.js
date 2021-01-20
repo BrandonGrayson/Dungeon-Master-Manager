@@ -9,7 +9,6 @@ module.exports = function(sequelize, DataTypes) {
     story_line: DataTypes.STRING,
     map_id: DataTypes.INTEGER
   });
-  
   Game.associate = function(models) {
     // Associating Author with Posts
     // When an Author is deleted, also delete any associated Posts
