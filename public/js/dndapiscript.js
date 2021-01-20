@@ -55,6 +55,7 @@ $(document).ready(() => {
       event.preventDefault();
       document.getElementById("name_of_game").innerText = this.textContent;
       document.getElementById("story_line").innerText = this.value;
+      $("#characterList").empty();
       $.get("/api/" + `${this.id}` + "/characters/", data => {
         for (let i = 0; i < data.length; i++) {
           $("<button>")
@@ -108,6 +109,11 @@ $(document).ready(() => {
       .text(this.textContent);
   });
   getOldGames();
+
+  $(document).on("click", "#createChar", function(event) {
+    event.preventDefault();
+    window.location.href = '/create';
+  });
 });
 
 $("#raceClassBtn").on("click", event => {
@@ -115,7 +121,6 @@ $("#raceClassBtn").on("click", event => {
   const nameValue = $("#characterName").val();
   const raceChoice = $("#raceChoice").val();
   const classChoice = $("#classChoice").val();
-  // const weaponsChoice = $("#weapons").val();
   const strAtributeInput = $("#strAtribute").val();
   const dexAtributeInput = $("#dexAtribute").val();
   const constAtributeInput = $("#constAtribute").val();
@@ -125,56 +130,53 @@ $("#raceClassBtn").on("click", event => {
   const gamedId = $("#gamename").attr("class");
 
   if (nameValue === "") {
-    alert("Please Enter a Name");
+    alert("My liege, we must have a name!");
     return;
   }
+  if ($("gamename").textContent === "NAME GOES HERE") {
+    alert("Ah las, we need a game in order to start our journey");
+    return;
+  }
+
   console.log($("#weapons").val());
 
-  //   // $("<h1>")
-  //   //   .text($("#characterName").val())
-  //   //   .attr("class", "mt-0")
-  //   //   .appendTo("#nameText");
-  //   // $("<h4>")
-  //   //   .text($("#raceChoice").val())
-  //   //   .attr("class", "mt-0")
-  //   //   .appendTo("#raceText");
-  //   // $("<h4>")
-  //   //   .text($("#classChoice").val())
-  //   //   .attr("class", "mt-0")
-  //   //   .appendTo("#classText");
-  //   // $("<h4>")
-  //   //   .text($("#simpleweaponChoice").val())
-  //   //   .attr("class", "mt-0")
-  //   //   .appendTo("#simpleWeaponText");
-  //   // $("<h4>")
-  //   //   .text($("#alignmentChoice").val())
-  //   //   .attr("class", "mt-0")
-  //   //   .appendTo("#alignmentText");
-  //   // $("<h4>")
-  //   //   .text($("#strAtribute").val())
-  //   //   .attr("class", "mt-0")
-  //   //   .appendTo("#strengthText");
-  //   // $("<h4>")
-  //   //   .text($("#dexAtribute").val())
-  //   //   .attr("class", "mt-0")
-  //   //   .appendTo("#dexterityText");
-  //   // $("<h4>")
-  //   //   .text($("#constAtribute").val())
-  //   //   .attr("class", "mt-0")
-  //   //   .appendTo("#constText");
-  //   // $("<h4>")
-  //   //   .text($("#intAtribute").val())
-  //   //   .attr("class", "mt-0")
-  //   //   .appendTo("#intellText");
-  //   // $("<h4>")
-  //   //   .text($("#wisAtribute").val())
-  //   //   .attr("class", "mt-0")
-  //   //   .appendTo("#wisdomText");
-  //   // $("<h4>")
-  //   //   .text($("#charAtribute").val())
-  //   //   .attr("class", "mt-0")
-  //   //   .appendTo("#charText");
-  // }
+  $("<h1>")
+    .text($("#characterName").val())
+    .attr("class", "mt-0")
+    .appendTo("#nameText");
+  $("<h4>")
+    .text($("#raceChoice").val())
+    .attr("class", "mt-0")
+    .appendTo("#raceText");
+  $("<h4>")
+    .text($("#classChoice").val())
+    .attr("class", "mt-0")
+    .appendTo("#classText");
+  $("<h4>")
+    .text($("#strAtribute").val())
+    .attr("class", "mt-0")
+    .appendTo("#strengthText");
+  $("<h4>")
+    .text($("#dexAtribute").val())
+    .attr("class", "mt-0")
+    .appendTo("#dexterityText");
+  $("<h4>")
+    .text($("#constAtribute").val())
+    .attr("class", "mt-0")
+    .appendTo("#constText");
+  $("<h4>")
+    .text($("#intAtribute").val())
+    .attr("class", "mt-0")
+    .appendTo("#intellText");
+  $("<h4>")
+    .text($("#wisAtribute").val())
+    .attr("class", "mt-0")
+    .appendTo("#wisdomText");
+  $("<h4>")
+    .text($("#charAtribute").val())
+    .attr("class", "mt-0")
+    .appendTo("#charText");
+
   const characters = [];
 
   const character = {
@@ -182,7 +184,6 @@ $("#raceClassBtn").on("click", event => {
     name: nameValue,
     race: raceChoice,
     class: classChoice,
-    // weapons: weaponsChoice,
     strength: parseInt(strAtributeInput),
     dexterity: parseInt(dexAtributeInput),
     constitution: parseInt(constAtributeInput),
