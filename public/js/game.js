@@ -25,6 +25,6 @@
     $.post("/api/new", newGame).then(() => {
       console.log("Game data was sent!");
     });
-    // location.reload();
+    location.reload();
   });
 
