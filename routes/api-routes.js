@@ -52,7 +52,8 @@ module.exports = function(app) {
     console.log("REQ BODY---> ", req.body)
     db.Game.create({
       name_of_game: req.body.name_of_game,
-      story_line: req.body.story_line
+      story_line: req.body.story_line,
+      map_id: req.body.map_id
     }).then((gameCreated) => {
       console.log("GAME CREATED--->", gameCreated);
       res.json(gameCreated);
