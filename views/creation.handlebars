@@ -3,13 +3,38 @@
     <div class="d-flex flex-column ml-auto mr-auto members-container p-2">
         <h1 class="m-0">GAME CREATION</h1>
         <h3 class="text-center">Your Dynasty Starts Here....</h3>
-    <form>
+
+
+    <form id="gameForm" >
         <label for="nameOfGame">Name of Game:</label>
         <input type="text" id="nameOfGame" name="nameOfGame">
         <label for="storyLine">Story Line:</label>
         <input type="text" id="storyLine" name="storyLine">
-        <button id="gameForm" class="btn btn-danger">Continue</button>
+
+        <h6>Choose a Map</h6>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="mapOfGame" value="dungeon.jpg" id="dungeonEntrance">
+            <label class="form-check-label" for="dungeonEntrance">
+            DungeonEntrance
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="mapOfGame" value="forestPath.png" id="forestPath">
+            <label class="form-check-label" for="forestPath">
+                ForestPath
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="mapOfGame" value="frozenRiver.jpg" id="frozenRiver">
+            <label class="form-check-label" for="frozenRiver">
+                Frozen River
+            </label>
+        </div>
+
+
+        <button type='submit' id="gameForm-submit-btn" class="btn btn-danger">Continue</button>
     </form>
+    
     <div id="listgames" class="mt-5 d-flex flex-column">
         <h3 class="text-center">Active Games</h3>
     </div>
@@ -48,17 +73,6 @@
                 descriptions.
             </label>
             <select class="form-control" id="classChoice" placeholder="Choose a class">
-            </select>
-        </section>
-        <section class="form-group">
-            <label for="classChoice">
-                <h3>Weapons</h3>
-                Choose a weapon for your character. Each class represents your character's vocation and the tactics
-                they'll typically use within the game. Not which one is best? Check out the <a
-                    href="https://www.dndbeyond.com/sources/basic-rules/classes" target="_new">D&D Beyond</a> class
-                descriptions.
-            </label>
-            <select class="form-control" id="weapons" placeholder="Choose a weapon">
             </select>
         </section>
         <section class="d-flex flex-row">
@@ -119,6 +133,7 @@
 <h3 id="charText" class="mx-1 mt-0">Char:</h3>
 </section>
 </section>
+<button type="submit" class="btn btn-danger" id="memberBtn">Continue to Member Page</button>
 </section>
 </section>
 </div>

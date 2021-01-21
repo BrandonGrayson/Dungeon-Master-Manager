@@ -1,9 +1,14 @@
 // eslint-disable-next-line prefer-arrow-callback
-$(document).ready(function() {
   // eslint-disable-next-line prefer-arrow-callback
-  $("#gameForm").on("click", function(event) {
+
+
+  $("#gameForm").on("submit", function(event) {
     event.preventDefault();
     console.log("gamebtn clicked");
+    console.log('THE EVENT ----> ', event)
+    let map = $('input[name="mapOfGame"]:checked').val();
+    console.log(map);
+    // check to figure out which map id was selected
     // make a new game object
     const newGame = {
       // eslint-disable-next-line camelcase
@@ -13,14 +18,15 @@ $(document).ready(function() {
       // eslint-disable-next-line camelcase
       story_line: $("#storyLine")
         .val()
-        .trim()
+        .trim(),
+      map_id: map
     };
-    console.log(newGame);
+    console.log("NEW GAME VARIABLE--->", newGame);
 
     // create post request for
     $.post("/api/new", newGame).then(() => {
       console.log("Game data was sent!");
     });
-    location.reload();
+    // location.reload();
   });
-});
+

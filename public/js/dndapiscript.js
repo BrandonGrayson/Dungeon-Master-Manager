@@ -41,11 +41,15 @@ $(document).ready(() => {
   //GETS ALL LIST OF GAMES
   function getGames() {
     $.get("/api/games/", data => {
+      console.log("This is the data---->", data)
+      
+
       for (let i = 0; i < data.length; i++) {
         $("<button>")
           .attr("id", data[i].id)
           .attr("class", "gamebutton")
           .attr("value", data[i].story_line)
+          .attr("data-map-id", data[i].map_id)
           .text(data[i].name_of_game)
           .appendTo("#list-of-games");
       }
@@ -55,8 +59,11 @@ $(document).ready(() => {
       event.preventDefault();
       document.getElementById("name_of_game").innerText = this.textContent;
       document.getElementById("story_line").innerText = this.value;
+      $("#map").attr("src", "imgs/maps/" + $(this).data("map-id"))
+      console.log(this)
       $("#characterList").empty();
       $.get("/api/" + `${this.id}` + "/characters/", data => {
+        console.log("This is the data---->", data)
         for (let i = 0; i < data.length; i++) {
           $("<button>")
             .attr("id", data[i].id)
@@ -113,6 +120,10 @@ $(document).ready(() => {
   $(document).on("click", "#createChar", function(event) {
     event.preventDefault();
     window.location.href = '/create';
+  });
+  $(document).on("click", "#memberBtn", function(event) {
+    event.preventDefault();
+    window.location.href = '/member';
   });
 });
 

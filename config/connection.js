@@ -12,7 +12,7 @@ if (process.env.JAWSDB_URL) {
     // Your username
     user: "root",
     // Your password
-    password: "8Zelkova8",
+    password: "Prolific1",
     database: "DMM_DB"
   });
 
