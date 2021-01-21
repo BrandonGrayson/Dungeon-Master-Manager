@@ -1,6 +1,8 @@
 // eslint-disable-next-line prefer-arrow-callback
   // eslint-disable-next-line prefer-arrow-callback
-  $("#gameForm").on("submit", function(event) {
+
+
+  $("#gameForm").on("submit", async function(event) {
     event.preventDefault();
     console.log("gamebtn clicked");
     console.log('THE EVENT ----> ', event)
@@ -17,9 +19,9 @@
       story_line: $("#storyLine")
         .val()
         .trim(),
-      map_id: map
+      map_id: await map
     };
-    // console.log(newGame);
+    console.log("NEW GAME VARIABLE--->", newGame);
 
     // create post request for
     $.post("/api/new", newGame).then(() => {
