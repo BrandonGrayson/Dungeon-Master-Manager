@@ -1,7 +1,5 @@
 // eslint-disable-next-line prefer-arrow-callback
   // eslint-disable-next-line prefer-arrow-callback
-
-
   $("#gameForm").on("submit", function(event) {
     event.preventDefault();
     console.log("gamebtn clicked");
