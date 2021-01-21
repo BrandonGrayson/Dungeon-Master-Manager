@@ -1,5 +1,4 @@
 // eslint-disable-next-line prefer-arrow-callback
-$(document).ready(function() {
   // eslint-disable-next-line prefer-arrow-callback
   $("#gameForm").on("click", function(event) {
     event.preventDefault();
@@ -13,7 +12,8 @@ $(document).ready(function() {
       // eslint-disable-next-line camelcase
       story_line: $("#storyLine")
         .val()
-        .trim()
+        .trim(),
+      map_id: $("#mapOfGame").val().trim()
     };
     console.log(newGame);
 
@@ -23,4 +23,4 @@ $(document).ready(function() {
     });
     location.reload();
   });
-});
+
