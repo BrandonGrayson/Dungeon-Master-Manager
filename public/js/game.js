@@ -6,7 +6,6 @@
     event.preventDefault();
     console.log("gamebtn clicked");
     console.log('THE EVENT ----> ', event)
-
     let map = $('input[name="mapOfGame"]:checked').val();
     console.log(map);
     // check to figure out which map id was selected
