@@ -21,9 +21,9 @@ module.exports = (app) => {
         res.render('login', )
     })
     app.post('/login', passport.authenticate("local"), async (req, res) => {
-        let user = await User.findOne({
+        let user = await db.User.findOne({
             where: {
-                email: req.body.email
+                email: req.body.userEmail
             }
         })
         res.render("members", {
@@ -33,6 +33,11 @@ module.exports = (app) => {
     app.get('/register', (req, res) => {
         res.render('register', )
     })
+
+    app.get('/logout', function (req, res) {
+        req.logout();
+        res.redirect('/login');
+    });
 
     app.post('/register', checkNotAuthenticated, async (req, res) => {
         console.log(req.body);
