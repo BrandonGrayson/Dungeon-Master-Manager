@@ -7,8 +7,15 @@ body {
   background: #1f150c;
   font-family: 'Proza Libre', sans-serif;
   font-size: 14pt;
-  color: #a2a79e;
+  color: #d5dad0;
   margin: 2%;
+  font-weight: normal;
+}
+
+label {
+  font-family: 'Proza Libre', sans-serif;
+  font-size: 11pt;
+  color: #e7ede2;
 }
 
 .howToCard {
@@ -27,7 +34,7 @@ body {
 h1 {
   font-family: 'Roboto Slab', serif;
   size: 24px;
-  color: #A27E8E;
+  color: #ffc5df;
   text-align: center;
   margin-top: 25px;
   margin-bottom: 25px;
@@ -36,7 +43,7 @@ h1 {
 h2 {
   font-family: 'Roboto Slab', serif;
   size: 20px;
-  color: #a57373;
+  color: #ff9e9e;
   background: #3d2222;
   padding: 5px;
   border-radius: 10px;
@@ -45,27 +52,23 @@ h2 {
 h3 {
   font-family: 'Roboto Slab', serif;
   size: 18px;
-  color: #ac5f5f;
+  color: #de6b6b;
   margin-top: 20px;
 }
 
 a:link,
-a:visited {
-  color: #882924;
-  font-weight: bold;
-}
-
+a:visited,
 a:active {
-  color: red;
-  font-weight: bolder
+  color: #dc3545;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 a:hover {
-  color: #cb4942;
+  color: #ff7381;
   font-weight: bold;
+  text-decoration: none;
 }
-
-.background-logo {}
 
 .logo:hover {
   animation: shake 1s;
@@ -203,6 +206,33 @@ a:hover {
   text-align: left;
   display: block;
   width: 100%;
+  border-radius: 10px;
+}
+
+button:focus {
+  outline: none;
+  background-color: #882924;
+}
+
+.gamecreateBtn {
+  background: transparent;
+  font-family: 'Roboto Slab', serif;
+  border: 0px;
+  text-align: center;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 24px;
+  font-style: italic;
+}
+
+.gamecreateBtn:hover {
+  background: #882924;
+  border: 0px;
+  text-align: center;
+  display: block;
+  width: 100%;
+  padding: 10px;
   border-radius: 10px;
 }
 
