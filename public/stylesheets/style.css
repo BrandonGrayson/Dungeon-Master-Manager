@@ -20,8 +20,10 @@ label {
 
 .howToCard {
   font-family: 'Proza Libre', sans-serif !important;
-  border: 4px solid #A77464;
-  background-color: beige;
+  font-weight: 900;
+  border: 4px solid #A77464; 
+  background-color: azure;
+  color: black;
 }
 
 .members-container {
