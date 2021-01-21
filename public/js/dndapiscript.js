@@ -114,6 +114,10 @@ $(document).ready(() => {
     event.preventDefault();
     window.location.href = '/create';
   });
+  $(document).on("click", "#memberBtn", function(event) {
+    event.preventDefault();
+    window.location.href = '/member';
+  });
 });
 
 $("#raceClassBtn").on("click", event => {
