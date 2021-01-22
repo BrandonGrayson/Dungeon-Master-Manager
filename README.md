@@ -1,9 +1,10 @@
 # Dungeon Master Manager
 
-    
+[Application Link](http://stormy-chamber-33911.herokuapp.com/)    
  ### Liscense
     
  [MIT License](https://choosealicense.com/licenses/mit/)
+ 
 
     
  ## Table of Contents
@@ -41,12 +42,12 @@ This application provides a fun and easy way to keep track of your Dungeons & Dr
     
 ## Screen Shots
 
-This is the first page you will see. Click Enter to begin your adventure!
-<img width="679" alt="enter-page" src="https://user-images.githubusercontent.com/74565661/105144411-3771d500-5acb-11eb-9ccf-266984d3f5a8.png">
+Create your own adventure with your own characters!
+<img width="679" alt="enter-page" src="https://user-images.githubusercontent.com/72667159/105499205-25409400-5c8f-11eb-9608-3de4c9248543.JPG">
 
 
-
-<img width="695" alt="creation-page" src="https://user-images.githubusercontent.com/74565661/105144761-b6670d80-5acb-11eb-858d-f4ac92bb0bc3.png">
+See all of your games/stories with the characters assiociated with that story!
+<img width="695" alt="creation-page" src="https://user-images.githubusercontent.com/72667159/105499204-25409400-5c8f-11eb-8e34-83aa472877d5.JPG">
 
 
 
