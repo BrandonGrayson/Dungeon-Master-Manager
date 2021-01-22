@@ -3,32 +3,69 @@ form.login {
   margin-top: 50px;
 }
 
+
 body {
   background: #1f150c;
+  background-image: url("/imgs/hip-square.png");
+  margin: 3%;
+}
+
+body,
+p {
   font-family: 'Proza Libre', sans-serif;
-  font-size: 14pt;
-  color: #d5dad0;
-  margin: 2%;
-  font-weight: normal;
+  font-size: normal;
+  color: #ffffff;
+}
+
+a:link,
+a:visited,
+a:active {
+  color: red;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: normal;
+}
+
+a:hover {
+  color: red;
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: normal;
 }
 
 label {
   font-family: 'Proza Libre', sans-serif;
-  font-size: 11pt;
-  color: #e7ede2;
+  font-size: 12px;
+  color: #ffffff;
 }
 
 .howToCard {
-  font-family: 'Proza Libre', sans-serif !important;
-  border: 4px solid #A77464;
-  background-color: beige;
+  background: #281a0d76;
+  border: 2px solid #A77464;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);;
 }
 
 .members-container {
-  background: #2E1E0F;
+  background: #281a0d76;
   border: 2px solid #A77464;
   border-radius: 10px;
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.50);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+#welcome {
+  font-family: 'Roboto Slab', serif;
+  color: #e74949;
+  text-align: center;
+  font-style: italic;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: transparent;
+
+}
+
+hr {
+  border-top: 2px solid #A77464;
 }
 
 h1 {
@@ -36,8 +73,6 @@ h1 {
   size: 24px;
   color: #ffc5df;
   text-align: center;
-  margin-top: 25px;
-  margin-bottom: 25px;
 }
 
 h2 {
@@ -46,7 +81,10 @@ h2 {
   color: #ff9e9e;
   background: #3d2222;
   padding: 5px;
+  padding-left: 15px;
   border-radius: 10px;
+  margin-top: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 h3 {
@@ -56,19 +94,7 @@ h3 {
   margin-top: 20px;
 }
 
-a:link,
-a:visited,
-a:active {
-  color: #dc3545;
-  font-weight: bold;
-  text-decoration: none;
-}
 
-a:hover {
-  color: #ff7381;
-  font-weight: bold;
-  text-decoration: none;
-}
 
 .logo:hover {
   animation: shake 1s;
@@ -239,24 +265,24 @@ button:focus {
 #map {
   max-width: 100%;
   height: auto;
+  border-radius: 10px;
 }
 
 .logout-btn {
   background: transparent;
   border: 0px;
-  display: inline-block;
+  display: block;
   float: right;
-  padding: 10px;
   border-radius: 10px;
-  font-size: 10px;
+  color: #d79393;
+  margin-top: 5px;
 }
 
 .logout-btn:hover {
-  background: #882924;
+  background: transparent;
   border: 0px;
-  display: inline-block;
   float: right;
-  padding: 10px;
   border-radius: 10px;
-  font-size: 10px;
+  color: white;
+  margin-top: 5px;
 }
