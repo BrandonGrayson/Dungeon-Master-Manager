@@ -53,7 +53,7 @@ $(document).ready(() => {
       }
     });
     // eslint-disable-next-line prefer-arrow-callback
-    $(document).on("click", ".gamebutton", function(event) {
+    $(document).on("click", ".gamebutton", function (event) {
       event.preventDefault();
       document.getElementById("name_of_game").innerText = this.textContent;
       document.getElementById("story_line").innerText = this.value;
@@ -73,7 +73,7 @@ $(document).ready(() => {
         }
       });
     });
-    $(document).on("click", ".charbutton", function(event) {
+    $(document).on("click", ".charbutton", function (event) {
       event.preventDefault();
       $.get(
         "/api/" + `${this.id}` + "/characters/" + `${this.textContent}`,
@@ -94,6 +94,7 @@ $(document).ready(() => {
     });
   }
   getGames();
+
   function getOldGames() {
     $.get("/api/games/", data => {
       for (let i = 0; i < data.length; i++) {
@@ -107,7 +108,7 @@ $(document).ready(() => {
     });
   }
   // eslint-disable-next-line prefer-arrow-callback
-  $(document).on("click", ".gamecreateBtn", function(event) {
+  $(document).on("click", ".gamecreateBtn", function (event) {
     event.preventDefault();
     $("#gamename")
       .attr("class", this.id)
@@ -115,11 +116,11 @@ $(document).ready(() => {
   });
   getOldGames();
 
-  $(document).on("click", "#createChar", function(event) {
+  $(document).on("click", "#createChar", function (event) {
     event.preventDefault();
     window.location.href = '/create';
   });
-  $(document).on("click", "#memberBtn", function(event) {
+  $(document).on("click", "#memberBtn", function (event) {
     event.preventDefault();
     window.location.href = '/member';
   });

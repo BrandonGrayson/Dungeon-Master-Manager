@@ -1,16 +1,17 @@
-<h1>Login Your Account</h1>
+
 <section class="container p-5 members-container">
+    <h1>Dungeon Master Manager Login</h1>
 <form action="/login" method="POST">
 <div>
     <label for="email">Email: </label>
-    <input type="email" id="userEmail" name="userEmail" required>
+    <input type="email" id="userEmail" name="userEmail" class="form-control" required>
 </div>
 <div>
     <label for="password">Password: </label>
     <input type="password" id="userPassword" name="userPassword" required>
 </div>
-  <button type="submit" class="btn btn-danger">LOGIN INTO YOUR ACCOUNT</button>
+  <button type="submit" class="btn btn-danger"><i class="fas fa-sign-in-alt"></i> LOG IN TO YOUR ACCOUNT</button>
 </form>
 </form>
-<a href="/register">Need an account? Register here.</a>
+<p class="text-center"><a href="/register">Need an account? Register here.</a></p>
 </section>

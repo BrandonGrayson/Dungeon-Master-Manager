@@ -1,7 +1,7 @@
-<div class="d-flex flex-column justify-content-center">
-<section class="d-flex flex-row" style="min-width: 450px;">
+<section class="container-fluid d-flex">
+<section class="d-flex flex-row">
     <div class="d-flex flex-column ml-auto mr-auto members-container p-2">
-        <h1 class="m-0">GAME CREATION</h1>
+        <h2 class="m-0">Step 1: Game Creation</h2>
         <h3 class="text-center">Your Dynasty Starts Here....</h3>
 
 
@@ -15,13 +15,13 @@
         <div class="form-check">
             <input class="form-check-input" type="radio" name="mapOfGame" value="dungeon.jpg" id="dungeonEntrance">
             <label class="form-check-label" for="dungeonEntrance">
-            DungeonEntrance
+            Dungeon Entrance
             </label>
         </div>
         <div class="form-check">
             <input class="form-check-input" type="radio" name="mapOfGame" value="forestPath.png" id="forestPath">
             <label class="form-check-label" for="forestPath">
-                ForestPath
+                Forest Path
             </label>
         </div>
         <div class="form-check">
@@ -31,20 +31,27 @@
             </label>
         </div>
 
-
-        <button type='submit' id="gameForm-submit-btn" class="btn btn-danger">Continue</button>
+<div class="row justify-content-center">
+        <button type='submit' id="gameForm-submit-btn" class="btn btn-danger mt-4">CREATE CAMPAIGN</button>
+    </div>
     </form>
     
     <div id="listgames" class="mt-5 d-flex flex-column">
-        <h3 class="text-center">Active Games</h3>
+        <h3 class="text-center">Active Campaigns</h3>
     </div>
     </div>
 </section>
 <section class="container-fluid d-flex flex-row align-items-center justify-content-center">
-    <div class="d-flex flex-column mt-2 members-container p-2" style="max-width: 500px;">
-    <h1>CHARACTER CREATION</h1>
-    <h2 class="text-center">for</h2>
-    <h1 id="gamename">NAME GOES HERE</h1>
+<div class="d-flex flex-column ml-auto mr-auto members-container p-2">
+    <h2 class="m-0">Step 2: Character Creation</h2>
+
+<div style="clear: both" class="d-flex justify-content-center">
+    <h3 style="float: left" class="mr-2">For</h3>
+    <h3 style="float: right" id="gamename">Your Campaign</h3>
+</div>
+<hr />
+
+
     <form>
         <section class="form-group">
             <label for="characterName">
@@ -101,12 +108,14 @@
         <input type="text" class="form-control" id="charAtribute">
         </section>
         </section>
-        <button type="submit" class="btn btn-danger" id="raceClassBtn">Continue</button>
+        <div class="row justify-content-center">
+        <button type="submit" class="btn btn-danger" id="raceClassBtn">CREATE CHARACTER</button>
+        </div>
     </form>
     </div>
-<section id="createdCharacter" class="m-5 members-container p-2" style="max-width: 400px;">
-<h3 class="text-center">NEW CREATED CHARACTER</h3>
-<h3 id="nameText">NAME:</h3>
+<section id="createdCharacter" class="m-5 members-container p-2">
+<h2 class="text-center">New Character</h2>
+<h3 id="nameText">Name:</h3>
 <section class="d-flex flex-row">
 <h3 id="raceText" class="mt-0">Race:</h3>
 </section>
@@ -133,8 +142,9 @@
 <h3 id="charText" class="mx-1 mt-0">Char:</h3>
 </section>
 </section>
-<button type="submit" class="btn btn-danger" id="memberBtn">Continue to Member Page</button>
+<div class="row justify-content-center">
+<button type="submit" class="btn btn-danger mt-4" id="memberBtn">Continue to Member Page</button>
+</div>
 </section>
 </section>
 </div>
-
