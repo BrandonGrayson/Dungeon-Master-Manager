@@ -42,8 +42,6 @@ $(document).ready(() => {
   function getGames() {
     $.get("/api/games/", data => {
       console.log("This is the data---->", data)
-      
-
       for (let i = 0; i < data.length; i++) {
         $("<button>")
           .attr("id", data[i].id)
@@ -120,6 +118,10 @@ $(document).ready(() => {
   $(document).on("click", "#createChar", function(event) {
     event.preventDefault();
     window.location.href = '/create';
+  });
+  $(document).on("click", "#memberBtn", function(event) {
+    event.preventDefault();
+    window.location.href = '/member';
   });
 });
 

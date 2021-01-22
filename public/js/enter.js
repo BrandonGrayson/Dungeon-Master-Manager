@@ -37,7 +37,7 @@ $(document).ready(() => {
     $(".body-section").fadeOut(2000);
 
     setTimeout(() => {
-      location.replace("/create");
+      window.location.href = "/howTo";
     }, 1500);
   });
 });
