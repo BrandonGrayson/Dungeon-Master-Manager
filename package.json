@@ -13,7 +13,7 @@
     "sequelize": "^5.22.3"
   },
   "scripts": {
-    "test": "mocha",
+    "test": "",
     "start": "node server.js"
   },
   "repository": {
